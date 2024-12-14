@@ -1,5 +1,7 @@
 from model import Planet
 from view import PlanetView
+from math import cos
+from math import sin
 
 class ControllerPlanets:
     def __init__(self):
@@ -35,7 +37,11 @@ class ControllerPlanets:
         if name not in self.planets:
             self.view.show_mess('Планета с таким именем не найдена')
         else:
-            for num, _ in enumerate(range(step_move), 1):
-                print(f'Шаг {num}: Планета {name} на позиции x={(self.planets[name]['radius']-(self.planets[name]['speed']*float(time_step*num/2))): .2f}, y={(self.planets[name]['speed']*(time_step/num*0.228)): .2f}')
+            for num, _ in enumerate(range(1, step_move+1), 1):
+                u = self.planets[name]['speed'] / self.planets[name]['radius']
+                w = u * num * time_step
+                x = self.planets[name]['radius'] * cos(w)
+                y = self.planets[name]['radius'] * sin(w)
+                print(f'Шаг {num}: Планета {name} на позиции x={x: .2f}, y={y: .2f}')
                 self.view.display_move_planet(name)
 
