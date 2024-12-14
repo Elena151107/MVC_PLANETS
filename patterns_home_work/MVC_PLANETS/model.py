@@ -32,20 +32,21 @@
 class Planet:
     def __init__(self, name):
         self.name = name
-        self.radius = 0.0
-        self.speed = 0.0
-        self.mass = 0.0
+        self.radius = None
+        self.speed = None
+        self.mass = None
 
     def set_radius(self, radius):
         self.radius = radius
-        return self.radius
+        return float(self.radius)
 
     def set_speed(self, speed):
         self.speed = speed
-        return self.speed
+        return float(self.speed)
 
     def set_mass(self, mass):
         self.mass = mass
-        return self.mass
+        return float(self.mass)
+
 
 
