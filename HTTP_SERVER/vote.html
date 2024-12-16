@@ -5,6 +5,41 @@
     <title>Vote</title>
 </head>
 <body>
+<h1>CAT</h1>
+<button type="submit" id="cat" value="Voice">Voice</button>
+<p id="output_cat">Count: 0</p>
 
+<h1>DOG</h1>
+<button type="submit" id="dog" value="Voice">Voice</button>
+<p id="output_dog">Count: 0</p>
+
+<h1>PARROT</h1>
+<button type="submit" id="parrot" value="Voice">Voice</button>
+<p id="output_parrot">Count: 0</p>
+
+
+<script>
+    let count_c = 0;
+    document.getElementById('cat').addEventListener('click', async() => {
+    cat = document.getElementById('output_cat')
+    count_c ++;
+    cat.textContent = `Count: ${count_c}`;
+    });
+
+    let count_d = 0;
+    document.getElementById('dog').addEventListener('click', async() => {
+    dog = document.getElementById('output_dog')
+    count_d ++;
+    dog.textContent = `Count: ${count_d}`;
+    });
+
+    let count_p = 0;
+    document.getElementById('parrot').addEventListener('click', async() => {
+    parrot = document.getElementById('output_parrot')
+    count_p ++;
+    parrot.textContent = `Count: ${count_p}`;
+    });
+
+</script>
 </body>
 </html>
