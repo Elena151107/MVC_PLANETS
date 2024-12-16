@@ -1,3 +1,8 @@
+"""    Задание: "Мини-сервер для голосования"
+Создать веб-сервер на Python с использованием http.server, который предоставляет HTML-страницу для голосования.
+Веб-страница должна отправлять данные на сервер через JavaScript с использованием fetch()4"""
+
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
